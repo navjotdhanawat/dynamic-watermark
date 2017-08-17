@@ -1,6 +1,6 @@
 {
   "name": "dynamic-watermark",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "Dynamic Watermark is npm watermark module to add watermark over image. It can add image as well as text watermark on given positions",
   "main": "index.js",
   "scripts": {
