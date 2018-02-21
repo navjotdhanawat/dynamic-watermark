@@ -1,4 +1,7 @@
-## How to Setup: Dynamic Watermark to add watermark(image/text) over image using nodejs.
+## Dynamic Watermark : (dynamic-watermark)
+    Node module to add watermark(image/text) over image using nodejs.
+
+![Watermark](https://github.com/navjotdhanawat/dynamic-watermark/blob/master/sample-watermark.jpg)
 
 ```
 npm install dynamic-watermark --save
@@ -53,9 +56,8 @@ var optionsTextWatermark = {
 watermark.embed(optionsImageWatermark, function(status) {
     //Do what you want to do here
     console.log(status);
-})
+});
 ```
 
-##### Dont forget to fork and contribute
 ##### If you are facing any issue then dont forget to open
 [Open issues](https://github.com/navjotdhanawat/dynamic-watermark/issues)

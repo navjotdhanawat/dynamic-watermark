@@ -1,14 +1,14 @@
 {
   "name": "dynamic-watermark",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Dynamic Watermark is npm watermark module to add watermark over image. It can add image as well as text watermark on given positions",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/navjotdhanawat/dynamic-watermark"
   },
   "keywords": [
     "node watermark",
@@ -31,13 +31,7 @@
   "bugs": {
     "url": "https://github.com/navjotdhanawat/dynamic-watermark/issues"
   },
-  "devDependencies": {
-    "mocha": "~1.16.2",
-    "chai": "~1.8.1"
-  },
   "dependencies": {
-    "express": "^4.16.2",
-    "gm": "^1.23.1",
-    "method-override": "^2.3.10"
+    "gm": "^1.23.1"
   }
 }
