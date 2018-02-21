@@ -17,28 +17,45 @@ var watermark = require('dynamic-watermark');
 
 #### Step 2: Provide following options:
 ```
-var options = {
-    source : "source/file/path",
-    logo: "logo/file/path", // This is optional if you have provided text Watermark
-    destination: "destination/file/path",
-    position: "left-top",    // left-top, left-bottom, right-top, right-bottom
-    type: "text",   // text or image
-    text: "Watermark Text"  // This is optional if you have provided logo file
-}
+var optionsImageWatermark = {
+    type: "image",
+    source: "a.png",
+    logo: "logo.png", // This is optional if you have provided text Watermark
+    destination: "output.png",
+    position: {
+        logoX : 200,
+        logoY : 200,
+        logoHeight: 200,
+        logoWidth: 200
+    }
+};
+
+var optionsTextWatermark = {
+    type: "text",
+    text: "Watermark text", // This is optional if you have provided text Watermark
+    destination: "output.png",
+    source: "a.png",
+    position: {
+        logoX : 200,
+        logoY : 200,
+        logoHeight: 200,
+        logoWidth: 200
+    },
+    textOption: {
+        fontSize: 100, //In px default : 20
+        color: '#AAF122' // Text color in hex default: #000000
+    }
+};
 ```
 #### Step 3: Final step is to call embed method by passing above options.
 ```
-watermark.embed(options, function(status) {
+//optionsImageWatermark or optionsTextWatermark
+watermark.embed(optionsImageWatermark, function(status) {
     //Do what you want to do here
     console.log(status);
 })
 ```
-##### Future scope:
-1. More specific image(logo/text) positions for watermark.
-2. More customization, such as font, font-size etc.
-3. Your help will be appreciated...
 
-
-##### Dont forget to fork
+##### Dont forget to fork and contribute
 ##### If you are facing any issue then dont forget to open
 [Open issues](https://github.com/navjotdhanawat/dynamic-watermark/issues)

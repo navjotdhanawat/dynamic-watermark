@@ -35,5 +35,9 @@
     "mocha": "~1.16.2",
     "chai": "~1.8.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.2",
+    "gm": "^1.23.1",
+    "method-override": "^2.3.10"
+  }
 }
