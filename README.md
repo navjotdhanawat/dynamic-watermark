@@ -57,6 +57,7 @@ watermark.embed(optionsImageWatermark, function(status) {
     console.log(status);
 });
 ```
+#### Example: [How to add watermark in nodejs](http://www.thenextfact.com/how-to-add-watermark-logo-text-image-nodejs/)
 
 ##### If there is something missing in this repo or any suggestions, then please open feature thread
 
