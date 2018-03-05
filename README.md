@@ -1,6 +1,6 @@
 ## Dynamic Watermark : (dynamic-watermark)
 
-Dynamic Watermark is npm watermark module to add watermark over image. It can add image as well as text watermark on given positions
+Dynamic Watermark is npm watermark module to add watermark over image. It can add image as well as text watermark on given positions. It does great job for adding watermarks.
 
 ![Watermark](https://github.com/navjotdhanawat/dynamic-watermark/blob/master/sample-watermark.jpg?style=centerme)
 
@@ -58,5 +58,7 @@ watermark.embed(optionsImageWatermark, function(status) {
 });
 ```
 
-##### If you are facing any issue then dont forget to open
+##### If there is something missing in this repo or any suggestions, then please open feature thread
+
+##### If you are facing any issue then dont forget to open issue or help thread.
 [Open issues](https://github.com/navjotdhanawat/dynamic-watermark/issues)
