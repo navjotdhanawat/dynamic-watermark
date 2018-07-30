@@ -16,25 +16,25 @@
 
 var gm = require('gm');
 
-var embed = function (options, callback) {
+var embed = function(options, callback) {
 
-    var source = options.source;   // Source file path
-    var logo = options.logo;   // Logo file path
+    var source = options.source; // Source file path
+    var logo = options.logo; // Logo file path
     var ext = source.split('.').pop();
     var destination = options.destination; // Destination file path
 
     /**
-    * Left bottom: X = 10, Y = logoY
-    * Right bottom: X = logoX, Y = logoY
-    * Left Top: X = 10, Y = 10
-    * Right Top: X = logoX, Y = 10
-    */
+     * Left bottom: X = 10, Y = logoY
+     * Right bottom: X = logoX, Y = logoY
+     * Left Top: X = 10, Y = 10
+     * Right Top: X = logoX, Y = 10
+     */
 
-    var position = options.position;   //'right-bottom';
-    var type = options.type;    //'text';
+    var position = options.position; //'right-bottom';
+    var type = options.type; //'text';
     var text = options.text ? options.text : '';
     gm(source)
-        .size(function (err, size) {
+        .size(function(err, size) {
 
             if (!err) {
                 var logoWidth = (size.width / 10);
@@ -75,29 +75,16 @@ var embed = function (options, callback) {
                     gm(source)
                         .fill(textColor)
                         .drawText(logoX, logoY, text)
-                        .fontSize( fontSize + 'px' )
-                        .write(destination, function (e) {
-                            console.log(e || 'Text Watermark Done. Path : ' + destination); // What would you like to do here?
-                            if (!e) {
-                                callback({ status: 1 });
-                            } else {
-                                callback({ status: 0 });
-                            }
-                        });
+                        .fontSize(fontSize + 'px')
+                        .write(destination, callback);
                 } else {
                     gm(source)
-                        .draw(['image over ' + logoX + ',' + logoY + ' ' + logoWidth + ',' + logoHeight + ' ' + logo])
-                        .write(destination, function (e) {
-                            console.log(e || 'Image Watermark Done. Path : ' + destination); // What would you like to do here?
-                            if (!e) {
-                                callback({ status: 1 });
-                            } else {
-                                callback({ status: 0 });
-                            }
-                        });
+                        .draw(['image over ' + logoX + ',' + logoY + ' ' + logoWidth + ',' + logoHeight + ' "' + logo + '"'])
+                        .write(destination, callback);
                 }
             } else {
-                console.log(err);
+                console.error(err);
+                callback(err);
             }
         });
 };
